@@ -3,7 +3,7 @@
 @use "../../atome/stan/btn-radius.scss";
 @use "../../atome/typography/default";
 .ourAchievments-module {
-  margin: $wbu-margin * 2.5 auto;
+  margin: 0 auto $wbu-margin * 2.5;
   width: 100%;
   &__image {
     margin-top: 50px;

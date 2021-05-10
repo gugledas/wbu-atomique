@@ -10,7 +10,7 @@ import "../scss/molecule/stan/serviceBlock-module.scss";
 // import "../scss/molecule/stan/paragraphList.scss";
 import "../scss/molecule/stan/pushNewsletter.scss";
 import "../scss/molecule/stan/twoBlockCarousel.scss";
-//import "../scss/molecule/stan/galeryImage.scss";
+import "../scss/molecule/stan/galeryImage.scss";
 import "../scss/molecule/stan/galeryTitle.scss";
 import "../scss/molecule/stan/projectSummary.scss";
 
