@@ -1,0 +1,210 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./atome/mitor-btn.scss";
+@use "./atome/carrousel-nav.scss";
+.mitor-section-title {
+  //padding: $space-bottom 0;
+  position: relative;
+  overflow: hidden;
+  .section-header {
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 7rem;
+    .section-title {
+      max-width: 700px;
+      text-transform: capitalize;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: $wbu-margin;
+      color: black;
+    }
+    .section-desc {
+      text-align: center;
+      margin: 0 auto;
+      font-size: $wbu-default-font-size;
+      line-height: 30px;
+    }
+  }
+  &--bg {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 75%;
+      height: 100%;
+      left: 10%;
+      right: 10%;
+      margin: 0 auto;
+      z-index: -1;
+      background-image: url("./img/map2.png");
+      background-size: cover;
+      background-position: center;
+      padding: 0 30px;
+      opacity: 0.8;
+      // background-color: red;
+    }
+    .section-header {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column-reverse;
+      .section-title {
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+      .section-desc {
+        font-weight: bold;
+      }
+    }
+  }
+  &--overflowable {
+    overflow: visible;
+    padding: $space-bottom 0;
+    .section-header {
+      max-width: 800px;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 7rem;
+      .section-title {
+        max-width: 700px;
+        font-weight: bold;
+        text-transform: capitalize;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: $wbu-margin;
+      }
+      .section-desc {
+        text-align: center;
+        margin: 0 auto;
+        font-size: $wbu-default-font-size;
+        line-height: 30px;
+      }
+    }
+  }
+  &--bottom-black {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 310px;
+      width: 100%;
+      background-color: $wbu-background;
+    }
+  }
+  &--item-midle-border {
+    .items {
+      .item:nth-child(2) {
+        border-left: 1px solid $wbu-color-boder;
+        border-right: 1px solid $wbu-color-boder;
+      }
+    }
+  }
+  &--color-middle {
+    .items {
+      .item:nth-child(2) {
+        .services-list {
+          .bg-icon::before {
+            background-color: $wbu-color-secondary;
+          }
+        }
+      }
+      .item:nth-child(5) {
+        .services-list {
+          .bg-icon::before {
+            background-color: $wbu-color-primary;
+          }
+          .icon {
+            svg {
+              fill: $wbu-color-teal;
+            }
+          }
+        }
+      }
+      .item:nth-child(3) {
+        .services-list {
+          .bg-icon::before {
+            background-color: $wbu-color-thirdly;
+          }
+        }
+      }
+      .item:nth-child(7) {
+        .services-list {
+          .bg-icon::before {
+            background-color: $wbu-color-primary;
+          }
+        }
+      }
+    }
+  }
+  &--absolute-content {
+    padding: $space-bottom * 1.8 0;
+  }
+  &--text-left {
+    .section-header {
+      margin: 0;
+      display: block;
+      margin-bottom: 4rem;
+      .section-title {
+        text-align: left;
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+      .section-desc {
+        text-align: left;
+      }
+    }
+    .mitor-project-tab {
+      .mpt-tabs {
+        justify-content: start;
+        margin-bottom: 6rem;
+      }
+      .container > .row {
+        min-height: 40rem;
+      }
+    }
+  }
+  .tree-card-carousel {
+    .tcc-content {
+      @include media-min(DD) {
+        padding-left: 4rem !important;
+      }
+    }
+    .blog-carousel {
+      @include media-min(DD) {
+        margin-left: 4rem !important;
+      }
+    }
+    @include media-min(DD) {
+      position: absolute;
+      width: 100%;
+      right: 0;
+      padding-left: 0 !important;
+      .tcc-content {
+        padding-left: 0rem !important;
+      }
+    }
+    @include media-min(M) {
+      right: -20px;
+      padding-left: 0 !important;
+    }
+    @include media-min(LM) {
+      right: -50px;
+      padding-left: 4rem !important;
+      .tcc-content {
+        padding-left: 4rem !important;
+      }
+    }
+    @include media-min(L) {
+      right: -70px;
+      padding-left: 6rem !important;
+      .tcc-content {
+        padding-left: 6rem !important;
+      }
+    }
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+}

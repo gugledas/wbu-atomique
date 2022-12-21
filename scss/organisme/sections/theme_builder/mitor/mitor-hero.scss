@@ -1,0 +1,74 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./molecule/mitor-card-img.scss";
+@use "./atome/carrousel-nav.scss";
+
+.mitor-hero {
+  width: 100%;
+  padding: $space_bottom 0;
+  background-color: $wbu-background;
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  .mitor-card {
+    .mc-title {
+      color: white;
+    }
+    .mc-description {
+      color: $wbu-color-boder;
+      li::before {
+        @include wbu__svg-dd-puce-check(#fff, 30);
+      }
+    }
+  }
+  .carousel-hero {
+    padding: 3rem 0;
+  }
+
+  .svg-2,
+  .svg-3 {
+    width: 100%;
+    display: none;
+  }
+  &--un {
+    border-radius: 0;
+    border-bottom-left-radius: 8%;
+    .owl-carousel {
+      display: block;
+
+      .slider-handler {
+        overflow: hidden;
+      }
+      .owl-dots button {
+        background: #fff !important;
+        width: 15px;
+        height: 15px;
+        border-radius: 26px;
+        margin: 0 5px;
+        transition: 0.3s;
+      }
+      .owl-dots {
+        margin-top: $wbu-margin * 2;
+        text-align: left;
+      }
+      .owl-dots button.active {
+        width: 30px;
+      }
+    }
+    .svg-1 {
+      svg {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+        height: 5vw;
+        right: 0;
+      }
+    }
+  }
+}

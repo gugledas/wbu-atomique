@@ -1,0 +1,172 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../atome/mitor-btn.scss";
+@use "./achievments-counter.scss";
+@use "../atome/mitor-card__img.scss";
+@use "../atome/mitor-card__body.scss";
+@mixin dynamiqWidthRight {
+  width: 100%;
+  max-width: 270px;
+  @include media-max(XS) {
+    right: 0;
+  }
+}
+@mixin dynamiqWidthLeft {
+  width: 100%;
+  max-width: 270px;
+  @include media-max(XS) {
+    left: 0;
+  }
+}
+.mitor-card {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  //margin: 0;
+  @include media-max(XS) {
+    overflow: hidden;
+  }
+  .mitor-play-btn {
+    display: none;
+  }
+  &--left {
+    .mitor-card__img {
+      &::after {
+        content: "";
+        position: absolute;
+        left: -25px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        z-index: -1;
+        background-color: $wbu-background;
+        @include dynamiqWidthLeft();
+      }
+    }
+  }
+  &--right {
+    .mitor-card__img {
+      //order: 2;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -25px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        z-index: -1;
+        background-color: $wbu-background;
+        @include dynamiqWidthRight();
+      }
+    }
+  }
+  &--reverse {
+    .mitor-card__img {
+      .img-bloc {
+        justify-content: end;
+      }
+      order: 2;
+    }
+  }
+  &--triangle {
+    .mitor-card__img {
+      &::after {
+        content: "";
+        position: absolute;
+        left: -25px;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        z-index: -1;
+        border-bottom: 300px solid $wbu-background;
+        border-right: 300px solid transparent;
+        @include dynamiqWidthLeft();
+      }
+    }
+    &-right {
+      .mitor-card__img {
+        &::after {
+          content: "";
+          position: absolute;
+          right: -25px;
+          bottom: 0;
+          width: 0;
+          height: 0;
+          z-index: -1;
+          border-bottom: 300px solid $wbu-background;
+          border-left: 300px solid transparent;
+          @include dynamiqWidthRight();
+        }
+      }
+    }
+  }
+  &--carree {
+    .mitor-card__img {
+      &::after {
+        content: "";
+        position: absolute;
+        left: -25px;
+        bottom: 0;
+        width: 250px;
+        height: 50%;
+        z-index: -1;
+        background: $wbu-background;
+        @include dynamiqWidthLeft();
+      }
+    }
+    &-up {
+      .mitor-card__img {
+        &::after {
+          content: "";
+          position: absolute;
+          left: -25px;
+          top: 0;
+          width: 250px;
+          height: 50%;
+          z-index: -1;
+          background: $wbu-background;
+          @include dynamiqWidthLeft();
+        }
+      }
+    }
+    &-right {
+      .mitor-card__img {
+        &::after {
+          content: "";
+          position: absolute;
+          right: -25px;
+          bottom: 0;
+          width: 250px;
+          height: 50%;
+          z-index: -1;
+          background: $wbu-background;
+          @include dynamiqWidthRight();
+        }
+      }
+      &-up {
+        .mitor-card__img {
+          &::after {
+            content: "";
+            position: absolute;
+            right: -25px;
+            top: 0;
+            width: 250px;
+            height: 50%;
+            z-index: -1;
+            background: $wbu-background;
+            @include dynamiqWidthRight();
+          }
+        }
+      }
+    }
+  }
+  &--video {
+    .mitor-card__img {
+      .img-bloc {
+        justify-content: center;
+      }
+    }
+    .mitor-play-btn {
+      display: block;
+    }
+  }
+}

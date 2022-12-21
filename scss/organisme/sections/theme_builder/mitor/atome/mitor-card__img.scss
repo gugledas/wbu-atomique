@@ -1,0 +1,28 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../atome/mitor-btn.scss";
+
+.mitor-card__img {
+  position: relative;
+  z-index: 2;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    min-height: 15rem;
+  }
+
+  .img-bloc {
+    padding: 20px 0;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    @include media-max(XS) {
+      padding: 10px 0;
+      margin: 10px 0;
+    }
+  }
+}

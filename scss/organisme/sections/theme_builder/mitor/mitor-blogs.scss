@@ -1,0 +1,13 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./molecule/mitor-blog.scss";
+@use "./atome/mitor-widget-search.scss";
+@use "./atome/mitor-category-tag.scss";
+@use "./mitor-side-widget.scss";
+@use "./atome/mitor-media-link.scss";
+@use "./atome/mitor-comment-article.scss";
+@use "./mitor-comment-section.scss";
+
+.mitor-blogs-section-handler {
+  padding-bottom: 2rem;
+}

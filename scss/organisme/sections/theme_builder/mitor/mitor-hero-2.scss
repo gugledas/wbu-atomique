@@ -1,0 +1,434 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./atome/mitor-card__body.scss";
+@use "./atome/carrousel-nav.scss";
+@use "./atome/mitor-btn.scss";
+@use "./atome/mitor-form-inline.scss";
+
+.mitor-hero-2 {
+  width: 100%;
+  padding: $space_bottom * 1.2 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    background-color: $wbu-background;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+  & > img {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  & .cover-hero-image img {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .mitor-hero-content {
+    z-index: 2;
+    width: 100%;
+  }
+
+  .mitor-card__body {
+    text-align: center;
+    margin: 0 auto;
+    .mc-title {
+      color: white;
+      // @include bp_h2();
+    }
+    .mc-description {
+      color: $wbu-color-boder;
+      li::before {
+        @include wbu__svg-dd-puce-check(#fff, 30);
+      }
+    }
+    .mitor-btn {
+      margin-top: 6.5rem;
+    }
+  }
+  .swiper {
+    padding: 10rem 0;
+  }
+  .carousel-nav {
+    left: 10%;
+    right: initial;
+    bottom: 0%;
+  }
+  .text-black {
+    color: black;
+  }
+  .svg {
+    width: 100%;
+    display: none;
+  }
+  &--curve {
+    text-align: left;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+    }
+
+    .curve {
+      display: block;
+      svg {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+  }
+  &--triangle-asym {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 30% 100%, 0 90%);
+    text-align: left;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+    }
+  }
+  &--triangle {
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 50% 100%, 0 89%);
+    text-align: left;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+    }
+  }
+  &--curve-asym {
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 40%;
+    text-align: left;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+    }
+  }
+  &--fan-opacity {
+    text-align: left;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+    }
+    .fan-opacity {
+      display: block;
+
+      svg {
+        width: 100%;
+        height: 15%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+  &--wave {
+    text-align: left;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+    }
+    .wave {
+      display: block;
+      svg {
+        width: 100%;
+        height: 10vw;
+        position: absolute;
+
+        bottom: 0;
+      }
+    }
+  }
+  &--mountain {
+    text-align: left;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+    }
+    .mountain {
+      display: block;
+      svg {
+        width: 100%;
+        height: 10vw;
+        position: absolute;
+
+        bottom: 0;
+      }
+    }
+  }
+  &--book {
+    text-align: left;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+    }
+    .book {
+      display: block;
+      svg {
+        width: 100%;
+        height: 10vw;
+        position: absolute;
+
+        bottom: 0;
+      }
+    }
+  }
+  &--pyramid {
+    text-align: left;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+    }
+    .pyramid {
+      display: block;
+      svg {
+        width: 300vh;
+        height: 20vh;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+  &--ocean {
+    text-align: left;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+    }
+    .ocean {
+      display: block;
+      height: 5%;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $wbu-background;
+      .wave {
+        background: url(./img/ocean.svg) repeat-x;
+        position: absolute;
+        top: -198px;
+        width: 6400px;
+        height: 198px;
+        animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+        transform: translate3d(0, 0, 0);
+      }
+      .wave:nth-of-type(2) {
+        top: -175px;
+        animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+          swell 7s ease -1.25s infinite;
+        opacity: 1;
+      }
+      svg {
+        width: 300vh;
+        height: 20vh;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+  &--split {
+    text-align: left;
+    //margin-bottom: 4rem;
+    overflow: visible;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+      height: 100%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 30px solid $wbu-color-primary;
+      z-index: 1;
+    }
+  }
+  &--titi {
+    text-align: left;
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: lighten($wbu-background, 15);
+    }
+    .titi {
+      display: block;
+      svg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 10vw;
+      }
+    }
+  }
+  &--deux {
+    .mitor-card__body {
+      text-align: left;
+    }
+    &::before {
+      background-color: $wbu-color-thirdly;
+    }
+  }
+  &--text-left {
+    min-height: 30vh;
+    .hole {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+      opacity: 0.9;
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: 70%;
+        bottom: 0;
+        right: 0;
+        fill: $wbu-color-primary;
+        @include media-max(MD) {
+          display: none;
+        }
+      }
+    }
+    .svg, .svg-2, .svg-3{
+      display: none;
+    }
+    &::before {
+      opacity: 0.07;
+    }
+    .mitor-card__body {
+      margin-left: 0;
+      text-align: left;
+      .mc-title {
+        color: color-yiq($wbu-color-primary);
+        margin-left: 0;
+        @include media-min(DD) {
+          width: 55%;
+        }
+      }
+    }
+  }
+}
+.thumbnail-slide {
+  bottom: 8%;
+  right: 0;
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .carousel-nav {
+    position: relative;
+    width: auto;
+    margin-right: 2rem;
+    bottom: 0;
+  }
+  img {
+    width: 100%;
+    // max-height: 100%;
+    object-fit: cover;
+    //height: 100%;
+    border-radius: 10px;
+    object-position: center;
+    cursor: pointer;
+  }
+  .thumbnail-swiper {
+    //background-color: red;
+    width: 100%;
+    max-height: 100px;
+    display: none;
+    .swiper-wrapper {
+      height: auto;
+    }
+    .swiper-slide {
+      opacity: 0.6;
+      height: auto;
+    }
+    .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+  @include media-min(DD) {
+    width: 50%;
+    right: 2%;
+    bottom: 8%;
+    justify-content: space-between;
+    .thumbnail-swiper {
+      display: block;
+    }
+  }
+  @include media-min(M) {
+    width: 45%;
+  }
+  @include media-min(L) {
+    width: 35%;
+  }
+}
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}

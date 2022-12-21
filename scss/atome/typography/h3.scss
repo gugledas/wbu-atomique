@@ -1,10 +1,6 @@
-@use "../../wbu-ressources.scss" as *;
-@use "./title";
+// @use "../../wbu-ressources-clean.scss" as *;
 
-h3 {
-  font-size  : $wbu-h3-font-size;
-  line-height: $wbu-h3-line-height;
-  @include media-min('DD') {
-    font-size: $wbu-h3-font-size *1.26;
-  }
-}
+// h3,
+// .h3 {
+//   @include bp_h3();
+// }

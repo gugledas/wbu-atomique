@@ -1,0 +1,25 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../_variables.scss" as *;
+.value-list{
+.value-card{
+    position: relative;
+    background: #fff;
+    color: #000000;
+    border-radius: 8px;
+    padding: $wbu-margin;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0,0 , 10%);
+    .value-icon{
+        font-weight: bold;
+        margin: $wbu-margin*1.5 0 $wbu-margin*1.5 0;
+        svg{
+        width: $wbu-h2-font-size;
+        }
+    }
+    .value-title{
+        font-weight: bold;
+        text-transform: capitalize;
+        margin: 0 0 $wbu-margin*0.5 0;
+    }
+}
+}

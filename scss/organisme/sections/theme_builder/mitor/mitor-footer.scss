@@ -1,0 +1,454 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./molecule/mitor-footer-last.scss";
+@use "./atome/mitor-btn.scss";
+@use "./atome/mitor-element-icon.scss";
+$p-color: darken($wbu-border-color, 10);
+$color-dark: lighten($wbu-background, 35);
+.mitor-footer {
+  .footer-first {
+    background: $wbu-background;
+    padding: $space-bottom 0 $space-bottom * 0.8;
+  }
+  .footer-middle {
+    margin-bottom: -2rem;
+    margin-top: 2rem;
+    display: none;
+    .fm-content {
+      border-top: 1px solid rgba($wbu-color-boder, 0.25);
+      padding-top: $space-bottom;
+    }
+  }
+  .ff-content {
+    padding-bottom: 2rem;
+  }
+
+  .img-logo {
+    margin-bottom: 1.5rem;
+    img {
+      max-width: 100%;
+    }
+  }
+  .footer-column {
+    padding-bottom: 2rem;
+  }
+  .mc-description {
+    font-size: $wbu-default-font-size;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    word-break: break-word;
+    color: $p-color;
+    letter-spacing: 0.5px;
+  }
+  .social-bloc {
+    display: flex;
+    margin-top: 1.5rem;
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      fill: $p-color;
+      transition: 0.3s;
+      transform: scale(1);
+    }
+    a {
+      display: inline-block;
+      padding: 1rem;
+      margin-right: 5px;
+      transition: 0.3s;
+      color: $p-color;
+      &:hover {
+        color: white;
+        svg {
+          fill: white;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+  .gallery-img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    img {
+      width: 7rem;
+      height: 7rem;
+      object-fit: cover;
+    }
+  }
+  .element {
+    display: flex;
+    align-items: center;
+    padding-bottom: $wbu-margin * 0.8;
+
+    .icon {
+      border: 2px soliid tomato;
+      color: $wbu-color-primary;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: $wbu-color-primary;
+      fill: $wbu-color-primary;
+    }
+
+    .location {
+      color: white;
+      margin-left: $wbu-margin * 0.8;
+    }
+
+    .email {
+      color: white;
+      margin-left: $wbu-margin * 0.5;
+    }
+
+    a {
+      transition: all 0.5s;
+      color: white;
+
+      &:hover {
+        text-decoration: none;
+        color: $wbu-color-primary;
+      }
+    }
+  }
+  a {
+    color: $p-color;
+    transition: 0.3s;
+  }
+  .link {
+    color: $p-color;
+
+    a,
+    & {
+      color: $p-color;
+      letter-spacing: 0.5px;
+      padding-bottom: $wbu-margin * 0.8;
+    }
+
+    &:hover,
+    a:hover {
+      text-decoration: none;
+      color: $wbu-color-primary;
+    }
+  }
+
+  .head-element {
+    margin-bottom: 2.5rem;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  .links {
+    display: block;
+    margin-top: $wbu-margin;
+  }
+
+  .description {
+    margin-top: $space_inner_top * 0.6;
+    color: white;
+  }
+
+  .email-form {
+    margin-top: $space_top * 0.5;
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+
+    .mail {
+      width: 100%;
+      height: 6rem;
+      border-radius: 60px;
+
+      &:focus {
+        box-shadow: none;
+        border-color: $wbu-color-primary;
+      }
+    }
+    .mitor-btn {
+      margin: 1.5rem;
+      margin-left: auto;
+    }
+
+    .send {
+      position: relative;
+      height: 60px;
+      background: $wbu-color-primary;
+      margin-left: $wbu-margin * -0.2;
+      border: none;
+      color: black;
+      letter-spacing: 0.5;
+      z-index: 1;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-left: $wbu-margin * 0.3;
+      //white-space: nowrap;
+      padding-right: $wbu-margin * 0.3;
+      //transform: scaleX(1);
+      width: 40%;
+      transition: ease-in-out 0.3s;
+
+      &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: scaleX(0);
+        z-index: -1;
+        position: absolute;
+        background: $wbu-background;
+        transition: transform 0.5s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4);
+      }
+
+      &:hover {
+        &::before {
+          transform: scaleX(1);
+        }
+
+        color: white;
+      }
+    }
+  }
+  .contact-elements {
+    padding: 0;
+
+    .element,
+    .mitor-element-icon {
+      margin-top: $wbu-margin * 0.5;
+      .el {
+        margin-left: $wbu-margin * 0.5;
+        color: $p-color;
+      }
+      a {
+        color: $p-color;
+      }
+    }
+  }
+  .element,
+  .mitor-element-icon {
+    display: flex;
+    align-items: center;
+    padding-bottom: $wbu-margin * 0.8;
+    .icon {
+      color: $p-color;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: $wbu-color-primary;
+      fill: $p-color;
+    }
+
+    .location {
+      color: white;
+      margin-left: $wbu-margin * 0.8;
+    }
+
+    .email {
+      color: white;
+      margin-left: $wbu-margin * 0.5;
+    }
+
+    a {
+      transition: all 0.5s;
+      color: white;
+      &:hover {
+        text-decoration: none;
+        color: $wbu-color-primary;
+      }
+    }
+  }
+  &--middle {
+    .footer-middle {
+      display: block;
+    }
+  }
+  &--only-first {
+    .footer-first {
+      display: block;
+    }
+    .mitor-footer-last {
+      display: none;
+    }
+  }
+}
+
+// mitor footer flat design start
+
+.mitor-footer--flat-3 {
+  .footer-first {
+    background-color: #ffffff;
+  }
+
+  .img-logo {
+    margin-bottom: 1.5rem;
+    img {
+      max-width: 100%;
+    }
+  }
+  .footer-column {
+    padding-bottom: 2rem;
+  }
+  .mc-description {
+    color: $color-dark;
+  }
+  .social-bloc {
+    display: flex;
+    margin-top: 1.5rem;
+    display: none;
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      fill: $p-color;
+      transition: 0.3s;
+      transform: scale(1);
+    }
+    a {
+      display: inline-block;
+      padding: 1rem;
+      margin-right: 5px;
+      transition: 0.3s;
+      color: $p-color;
+      &:hover {
+        color: white;
+        svg {
+          fill: white;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .contact-elements {
+    .element,
+    .mitor-element-icon {
+      .el {
+        color: rgba($color: #000000, $alpha: 0.6);
+      }
+      a {
+        color: rgba($color: #000000, $alpha: 0.6);
+      }
+    }
+  }
+  .element,
+  .mitor-element-icon {
+    .icon {
+      border: 2px soliid tomato;
+      color: $wbu-color-primary;
+    }
+    svg {
+      color: $wbu-color-primary;
+      fill: #000000;
+    }
+
+    a {
+      color: white;
+      &:hover {
+        text-decoration: none;
+        color: $wbu-color-primary;
+      }
+    }
+  }
+
+  .link {
+    color: rgba($color: #000000, $alpha: 0.6);
+    text-transform: capitalize;
+    margin-top: $wbu-margin * 0.43;
+    a,
+    & {
+      color: rgba($color: #000000, $alpha: 0.6);
+    }
+  }
+
+  .head-element {
+    color: #000000;
+  }
+
+  .description {
+    margin-top: $space_inner_top * 0.6;
+    color: white;
+  }
+
+  .email-form {
+    margin-top: $space_top * 0.5;
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+
+    .mail {
+      width: 100%;
+      height: 6rem;
+      border-radius: 60px;
+
+      &:focus {
+        box-shadow: none;
+        border-color: $wbu-color-primary;
+      }
+    }
+    .mitor-btn {
+      margin: 1rem;
+      margin-left: auto;
+    }
+
+    .send {
+      position: relative;
+      height: 60px;
+      background: $wbu-color-primary;
+      margin-left: $wbu-margin * -0.2;
+      border: none;
+      color: black;
+      letter-spacing: 0.5;
+      z-index: 1;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-left: $wbu-margin * 0.3;
+      //white-space: nowrap;
+      padding-right: $wbu-margin * 0.3;
+      //transform: scaleX(1);
+      width: 40%;
+      transition: ease-in-out 0.3s;
+
+      &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: scaleX(0);
+        z-index: -1;
+        position: absolute;
+        background: $wbu-background;
+        transition: transform 0.5s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4);
+      }
+
+      &:hover {
+        &::before {
+          transform: scaleX(1);
+        }
+
+        color: white;
+      }
+    }
+  }
+}

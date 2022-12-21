@@ -1,32 +1,27 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
 
-.portfolio {
-  padding: $space_top 0;
-  #portfolio-flters {
-    padding: 0;
-    margin: 0 auto 20px auto;
+.spaker_mod_portfolio {
+  .portfolio-flters {
     list-style: none;
     text-align: center;
 
     li {
       cursor: pointer;
       display: inline-block;
-      padding: 8px 15px 10px 15px;
       font-size: 14px;
       font-weight: 600;
       line-height: 1;
       text-transform: uppercase;
       color: #222222;
-      margin-bottom: 5px;
       transition: all 0.3s ease-in-out;
       border-radius: 3px;
     }
 
     li:hover,
     li.filter-active {
-      color: #fff;
-      background: #3498db;
+      color: color_yiq($wbu-background);
+      background: $wbu-background;
     }
   }
 
@@ -34,7 +29,7 @@
     margin-bottom: 30px;
   }
 
-  .portfolio-wrap {
+  /*.portfolio-wrap {
     transition: 0.3s;
     position: relative;
     overflow: hidden;
@@ -62,12 +57,10 @@
 
       h4 {
         font-size: 20px;
-        color: #fff;
         font-weight: 600;
       }
 
       p {
-        color: rgba(255, 255, 255, 0.7);
         font-size: 14px;
         text-transform: uppercase;
         padding: 0;
@@ -82,7 +75,6 @@
 
       a {
         text-decoration: none;
-        color: #fff;
         margin: 0 5px 0 0;
         font-size: 28px;
         display: inline-block;
@@ -96,7 +88,7 @@
 
     &::before {
       content: "";
-      background: rgba(34, 34, 34, 0.6);
+      background: rgba($wbu-background, $alpha: 0.6);
       position: absolute;
       left: 0;
       right: 0;
@@ -106,5 +98,5 @@
       z-index: 2;
       opacity: 0;
     }
-  }
+  }*/
 }
